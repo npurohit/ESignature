@@ -1,0 +1,24 @@
+﻿body {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Georgia;
+    font-size: 10pt;
+}
+
+header{ width: 100%;height: 100px;}
+
+#content {
+    border-top: 1px solid #00ffff;
+}
+
+#signingSection {width: 100%;}
+#signingSection #selectionPane {
+    width: 100px;
+    border-right: 1px solid #000000;
+    float: left;
+}
+#signingSection #signingWindow {
+    width: 790px;
+    float: right;
+}

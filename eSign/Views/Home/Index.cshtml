@@ -1,0 +1,29 @@
+﻿@model ESign.Model.SessionGroup
+
+@{
+    ViewBag.Title = "eSign";
+    Layout = "../_layout.cshtml";
+}
+<div id="signingSection">
+    <div id="selectionPane">
+        <div >
+            <span data-bind="text: name"></span>
+        </div>
+    </div>
+    <div id="signingWindow">
+        Some stuff here
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(function()
+    {
+        var serverView = @Html.Raw(Json.Encode(Model));
+        var koModel = new App.signingModel(serverView);
+
+        ko.applyBindings(koModel);
+
+        viewModel = koModel;
+    });
+</script>
+
