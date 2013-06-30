@@ -25,11 +25,28 @@ namespace eSign.Controllers
         {
             return new SessionGroup
             {
-                test = "greg",
                 Sessions = new List<SigningSession>
                 {
                     new SigningSession
                     {
+                        LineOfBusiness = "Auto",
+                        Documents = new List<Document>
+                        {
+                            new Document
+                            {
+                                Signers =new List<Signer>
+                                {
+                                    new Signer{
+                                        Name = "Greg Dzezinski"
+                                    }
+                                },
+                                //SignableImage = new System.Drawing.Bitmap("~/")
+                            }
+                        }
+                    },
+                    new SigningSession
+                    {
+                        LineOfBusiness = "Home",
                         Documents = new List<Document>
                         {
                             new Document

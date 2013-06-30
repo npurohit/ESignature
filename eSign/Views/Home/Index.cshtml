@@ -6,8 +6,8 @@
 }
 <div id="signingSection">
     <div id="selectionPane">
-        <div >
-            <span data-bind="text: name"></span>
+        <div data-bind="foreach: sessions">
+            <div data-bind="text: LineOfBusiness"></div>
         </div>
     </div>
     <div id="signingWindow">
