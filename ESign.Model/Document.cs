@@ -15,9 +15,11 @@ namespace ESign.Model
             Status = SignatureStatus.Incomplete;
         }
 
+        public string Name { get; set; }
+
         public List<Signer> Signers { get; set; } 
 
-        public Image SignableImage { get; set; }
+        public string PdfName { get; set; }
 
         public SignatureStatus Status { get; set; }
 

@@ -133,6 +133,8 @@
     <Content Include="Content\App.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\App.js" />
+    <Content Include="Content\AutoApplication.pdf" />
+    <Content Include="Content\HomeApplication.pdf" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.2.js" />
     <Content Include="Scripts\jquery-2.0.2.min.js" />

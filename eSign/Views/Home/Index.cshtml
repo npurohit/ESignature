@@ -7,11 +7,14 @@
 <div id="signingSection">
     <div id="selectionPane">
         <div data-bind="foreach: sessions">
-            <div data-bind="text: LineOfBusiness"></div>
+            <div class="bold" data-bind="text: lineOfBusiness"></div>
+            <div data-bind="foreach: documents">
+                <div data-bind="text: Name,click: function(data, event) { $parent.displayPdf(PdfName);}"></div>
+            </div>
         </div>
     </div>
     <div id="signingWindow">
-        Some stuff here
+        <object id="signingPdf" data="" type="application/pdf"></object>
     </div>
 </div>
 
@@ -23,7 +26,7 @@
 
         ko.applyBindings(koModel);
 
-        viewModel = koModel;
+        App.register();
     });
 </script>
 

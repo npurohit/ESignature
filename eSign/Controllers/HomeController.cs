@@ -16,10 +16,6 @@ namespace eSign.Controllers
             return View(model);
         }
 
-        public ViewResult GetSigningSession(string sessionId)
-        {
-            return View("_signingSession");
-        }
 
         private SessionGroup CreateModelForTesting()
         {
@@ -34,13 +30,14 @@ namespace eSign.Controllers
                         {
                             new Document
                             {
+                                Name = "Application",
                                 Signers =new List<Signer>
                                 {
                                     new Signer{
                                         Name = "Greg Dzezinski"
                                     }
                                 },
-                                //SignableImage = new System.Drawing.Bitmap("~/")
+                                PdfName = "AutoApplication"
                             }
                         }
                     },
@@ -51,13 +48,14 @@ namespace eSign.Controllers
                         {
                             new Document
                             {
+                                Name = "d Application",
                                 Signers =new List<Signer>
                                 {
                                     new Signer{
                                         Name = "Greg Dzezinski"
                                     }
                                 },
-                                //SignableImage = new System.Drawing.Bitmap("~/")
+                                PdfName = "HomeApplication"
                             }
                         }
                     }
