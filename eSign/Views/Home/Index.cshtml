@@ -9,7 +9,7 @@
         <div data-bind="foreach: sessions">
             <div class="bold" data-bind="text: lineOfBusiness"></div>
             <div data-bind="foreach: documents">
-                <div data-bind="text: Name,click: function(data, event) { $parent.displayPdf(PdfName);}"></div>
+                <div data-bind="text: Name,click: function(data, event) { $parent.displayPdf($data.PdfName);}"></div>
             </div>
         </div>
     </div>
